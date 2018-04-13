@@ -1,0 +1,77 @@
+/*
+* @Author: dell
+* @Date:   2018-03-15 19:39:44
+* @Last Modified by:   dell
+* @Last Modified time: 2018-03-16 18:38:23
+*/
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.scene{
+	/* background: rgba(0, 0, 0, 1.0); */
+	width: 500px;
+	height: 500px;
+	margin: 50px auto;
+	border: 10px solid black;
+	perspective: 1000px;
+	perspective-origin: left top;
+}
+.scene ul{
+	width: 200px;
+	height: 200px;
+	margin: 150px;
+	position: relative;
+    transform-style: preserve-3d;
+    /* background: black; */
+}
+.scene ul li{
+	width: 200px;
+	height: 200px;	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.scene:hover .left{
+	background: red;
+	transform: translateX(-100px) rotateY(90deg);
+	box-shadow: 0 0 15px 5px red inset;
+	transition: 3s linear;
+
+}
+.scene:hover .right{
+	background: orange;
+	transform: translateX(100px) rotateY(90deg);
+	box-shadow: 0 0 15px 5px orange inset;
+	transition: 3s linear;
+}
+.scene:hover .top{
+	background: yellow;
+	transform: translateY(-100px) rotateX(90deg);
+	box-shadow: 0 0 15px 5px yellow inset;
+	transition: 3s linear;
+}
+.scene:hover .bottom{
+    background: green;
+	transform: translateY(100px) rotateX(90deg);
+	box-shadow: 0 0 15px 5px green inset;
+	transition: 3s linear;
+	
+}
+.scene:hover .before{
+     background: blue;
+	transform: translateZ(100px)  ;
+	box-shadow: 0 0 15px 5px blue inset;
+	transition: 3s linear;
+}
+.scene:hover .after{
+	background: purple;
+	transform: translateZ(-100px)  ; 
+	box-shadow: 0 0 15px 5px purple inset;
+	transition: 3s linear;
+}
+.scene:hover ul{
+	transform: rotate3d(1, 1, 1, 360deg);
+	transition: 3s linear; 
+}
